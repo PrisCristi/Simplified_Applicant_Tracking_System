@@ -3,19 +3,22 @@ package org.example;
 import java.util.List;
 
 public class Applicant {
+    private String name;
     private List<String> previousCompanies;
     private String currentCity;
     private String preferredLocation;
     private double expectedSalary;
     private String status;
 
-    public Applicant(List<String> previousCompanies, String currentCity, String preferredLocation, double expectedSalary, String status) {
+    public Applicant(String name, List<String> previousCompanies, String currentCity, String preferredLocation, double expectedSalary, String status) {
+        this.name = name;
         this.previousCompanies = previousCompanies;
         this.currentCity = currentCity;
         this.preferredLocation = preferredLocation;
         this.expectedSalary = expectedSalary;
         this.status = status;
     }
+
 
     public boolean isRelocationPreferred(){ // isso é a etiqueta do metodo!
         boolean relocationPreferrence = !currentCity.equals(preferredLocation); // 1. compara se eles sao iguais
@@ -54,5 +57,13 @@ public class Applicant {
     }
     public void setStatus(String status) {
         this.status = status;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 }
