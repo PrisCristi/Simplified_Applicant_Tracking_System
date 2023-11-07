@@ -3,11 +3,11 @@ package org.example;
 import java.util.List;
 
 public class Applicant {
-    List<String> previousCompanies;
-    String currentCity;
-    String preferredLocation;
-    double expectedSalary;
-    String status;
+    private List<String> previousCompanies;
+    private String currentCity;
+    private String preferredLocation;
+    private double expectedSalary;
+    private String status;
 
     public Applicant(List<String> previousCompanies, String currentCity, String preferredLocation, double expectedSalary, String status) {
         this.previousCompanies = previousCompanies;

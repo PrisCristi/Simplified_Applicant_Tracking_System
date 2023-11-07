@@ -3,23 +3,40 @@ package org.example;
 import java.util.List;
 
 public class JobPosition {
-    String title;
-    String description;
-    double offeredSalaryRangeStart;
-    double offeredSalaryRangeEnd;
+    private String title;
+    private String description;
+    private double offeredSalaryRangeStart;
+    private double offeredSalaryRangeEnd;
     List<String> requiredSkills;
     String location;
+    String industry;
+    String role;
 
+    public JobPosition(String title, String description, double offeredSalaryRangeStart, double offeredSalaryRangeEnd, List<String> requiredSkills, String location) {
+        this.title = title;
+        this.description = description;
+        this.offeredSalaryRangeStart = offeredSalaryRangeStart;
+        this.offeredSalaryRangeEnd = offeredSalaryRangeEnd;
+        this.requiredSkills = requiredSkills;
+        this.location = location;
+    }
+    public boolean isWithinBudget(Applicant applicant){ // etiqueta
+        double withinBudget = applicant .getExpectedSalary(); // declarando withinBuget com o valor expectativa salarial
+        double offeredSalary = getOfferedSalaryRangeEnd();
 
+        if (withinBudget == offeredSalary){
+            System.out.println("Inside the budget");
+        } else {
+            System.out.println("Out of the budget");
+        } return false;  // salario fora do budget
+    }
 
     public String getTitle() {
         return title;
     }
-
     public void setTitle(String title) {
         this.title = title;
     }
-
     public String getDescription() {
         return description;
     }
