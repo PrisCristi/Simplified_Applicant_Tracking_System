@@ -12,7 +12,8 @@ public class JobPositionTest {
         jobPosition.setOfferedSalaryRangeEnd(6000);
 
         Applicant applicant = new Applicant();
-        applicant.setExpectedSalary(2000);
+        applicant.setExpectedSalary(7000);
+
 
 
 

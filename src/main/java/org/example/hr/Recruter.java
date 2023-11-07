@@ -12,13 +12,16 @@ public class Recruter {
     private Set<String> specializedIndustries;
     private Set<String> specializedRoles;
 
+    public Recruter(){
+
+    }
+
     public Recruter(String name) {
         this.name = name;
         jobPositionManaged = new ArrayList<>();
         specializedRoles = new HashSet<>();
         specializedIndustries = new HashSet<>();
     }
-
     public void assignJobPosition(JobPosition jobPosition) { // etiqueta
         if (jobPosition != null) {   // se a posicao estiver vazia execute o conteudo abaixo
             if (jobPositionManaged.contains(jobPosition)) {
@@ -37,12 +40,9 @@ public class Recruter {
                 boolean hasSpecializedRole = specializedRoles.contains(jobPosition.getRole());
                 return hasSpecializedIndustry && hasSpecializedRole;
             }
-
-
             public String getName () {
             return name;
         }
-
         public void setName (String name){
             this.name = name;
         }
@@ -66,7 +66,6 @@ public class Recruter {
         public Set<String> getSpecializedRoles () {
             return specializedRoles;
         }
-
         public void setSpecializedRoles (Set < String > specializedRoles) {
             this.specializedRoles = specializedRoles;
         }
