@@ -1,4 +1,4 @@
-package org.example;
+package org.example.hr;
 
 import java.util.List;
 
@@ -9,6 +9,9 @@ public class Applicant {
     private String preferredLocation;
     private double expectedSalary;
     private String status;
+
+    public Applicant(){
+    }
 
     public Applicant(String name, List<String> previousCompanies, String currentCity, String preferredLocation, double expectedSalary, String status) {
         this.name = name;

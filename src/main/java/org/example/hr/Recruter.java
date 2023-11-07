@@ -1,4 +1,4 @@
-package org.example;
+package org.example.hr;
 
 import java.util.ArrayList;
 import java.util.HashSet;

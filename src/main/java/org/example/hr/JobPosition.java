@@ -1,4 +1,4 @@
-package org.example;
+package org.example.hr;
 
 import java.util.List;
 
@@ -22,6 +22,9 @@ public class JobPosition {
         this.industry = industry;
         this.role = role;
     }
+   public JobPosition(){
+
+   }
     public boolean isWithinBudget(Applicant applicant){ // etiqueta
         double withinBudget = applicant .getExpectedSalary(); // declarando withinBuget com o valor expectativa salarial
         double offeredSalary = getOfferedSalaryRangeEnd();
